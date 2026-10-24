@@ -14,7 +14,24 @@ S=requests.Session()
 S.headers.update({"User-Agent":"SpainTripPhotoCurator/2.0 (static travel itinerary; Wikimedia Commons attribution; github.com/nadezhdalapshina/private_gpt)"})
 # Card position (1-based) -> exact Wikimedia Commons filename confirmed on file's description page.
 CURATED={
-    7:"Casas colgadas en el Tajo de Ronda Malaga paisaje.jpg",
+    17:"Plaza de Sevilla.jpg",
+    18:"Parque de María Luisa Sevilla.jpg",
+    19:"Barrio Santa Cruz.jpg",
+    20:"Sevilla - Torre del Oro and river Guadalquivir - 2.jpg",
+    21:"Bailaora at the Plaza de España in Seville.jpg",
+    22:"Sevilla - Real Alcázar - Patio de las Doncellas.jpg",
+    23:"Jardines del Real Alcázar de Sevilla.jpg",
+    24:"Giralda Seville Cathedral.jpg",
+    25:"Sunset in Metropol Parasol - Seville.JPG",
+    26:"Alhambra de Granada Patio de Los Leones.jpg",
+    27:"Patio de la Acequia.jpg",
+    28:"Alcazaba Alhambra Granada Spain.jpg",
+    29:"Alhambra - Estanque de El Partal.jpg",
+    30:"Flamenco dancer.jpg",
+    31:"Streets in Albaicín - Granada.JPG",
+    32:"Alhambra-atardecer.jpg",
+    33:"Carrera del Darro Granada Spain.jpg",
+    34:"Sacromonte granada.jpg",
 }
 
 def download_exact(filename):
