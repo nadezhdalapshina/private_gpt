@@ -14,7 +14,7 @@ S=requests.Session()
 S.headers.update({"User-Agent":"SpainTripPhotoCurator/2.0 (static travel itinerary; Wikimedia Commons attribution; github.com/nadezhdalapshina/private_gpt)"})
 # Card position (1-based) -> exact Wikimedia Commons filename confirmed on file's description page.
 CURATED={
-    2:"Picasso Museum Malaga.jpg",
+    2:"Patio del Museo Picasso Málaga (2018).jpg",
 }
 
 def download_exact(filename):
