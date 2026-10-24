@@ -14,14 +14,12 @@ S=requests.Session()
 S.headers.update({"User-Agent":"SpainTripPhotoCurator/2.0 (static travel itinerary; Wikimedia Commons attribution; github.com/nadezhdalapshina/private_gpt)"})
 # Card position (1-based) -> exact Wikimedia Commons filename confirmed on file's description page.
 CURATED={
-    45:"Coves de sant Josep de la Vall d'Uixó, barques.JPG",
-    46:"Interior de les coves de sant Josep, zona seca.JPG",
-    47:"Vista del paratge de les coves de sant Josep des de la muntanyeta.JPG",
-    48:"Vista de les muntanyes dels voltants de les coves de sant Josep, la Vall d'Uixó.JPG",
-    49:"Jardín del Turia.JPG",
-    50:"Ciudad de las Artes y las Ciencias in Valencia, Spain.jpg",
-    51:"Palau de les Arts Reina Sofia 01.jpg",
-    52:"Valencia - Beach 01.jpg",
+    17:"Sevilla - Plaza de España - 1.jpg",
+    22:"Patio de las doncellas.jpg",
+    27:"Patio de la Acequia.jpg",
+    29:"Partal Alhambra.jpg",
+    32:"Alhambra-atardecer.jpg",
+    33:"Carrera del Darro Granada Spain.jpg",
 }
 
 def download_exact(filename):
