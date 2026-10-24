@@ -14,16 +14,11 @@ S=requests.Session()
 S.headers.update({"User-Agent":"SpainTripPhotoCurator/2.0 (static travel itinerary; Wikimedia Commons attribution; github.com/nadezhdalapshina/private_gpt)"})
 # Card position (1-based) -> exact Wikimedia Commons filename confirmed on file's description page.
 CURATED={
-    1:("Кафедральный собор","Malaga cathedral.jpg"),
-    14:("Алькасаба","Alcazaba de Malaga (48681991897).jpg"),
-    15:("Римский театр","Malaga - Roman Theatre.jpg"),
-    16:("Крепость Хибральфаро","Da Gibralfaro.jpg"),
-    38:("Район Эль-Кармен","Barrio del Carmen 06.jpg"),
-    45:("Лодка по подземной реке","Coves de sant Josep de la Vall d'Uixó, barques.JPG"),
-    46:("Пещерные залы","Interior de les coves de sant Josep, zona seca.JPG"),
-    49:("Сады Турии","Jardín del Turia.JPG"),
-    50:("Город искусств и наук","Panorámica Ciudad de las Artes y las Ciencias - Flickr - DraXus.jpg"),
-    51:("Дворец искусств","Palau de les Arts, Valencia.jpg"),
+    1:("Кафедральный собор","View of Cathedral of Málaga.jpg"),
+    14:("Алькасаба","Alcazaba de Málaga overview.jpg"),
+    45:("Лодка по подземной реке","Coves de Sant Josep, Vall d'Uixó 02.jpg"),
+    49:("Сады Турии","Jardines del Turia. Valencia.jpg"),
+    51:("Дворец искусств","Palacio de las Artes Reina Sofía.jpg"),
 }
 
 def download_exact(filename):
