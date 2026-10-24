@@ -14,16 +14,6 @@ S=requests.Session()
 S.headers.update({"User-Agent":"SpainTripPhotoCurator/2.0 (static travel itinerary; Wikimedia Commons attribution; github.com/nadezhdalapshina/private_gpt)"})
 # Card position (1-based) -> exact Wikimedia Commons filename confirmed on file's description page.
 CURATED={
-    35:"Plaza de la Virgen - Valencia.jpg",
-    36:"Interior of Mercat Central de València 03.jpg",
-    37:"Valencia Miguelete.jpg",
-    38:"Portal de Valldigna. Barrio del Carmen, morería, ciudad de Valencia.jpg",
-    39:"Flamenco Dance.jpg",
-    40:"Castell de Xàtiva.jpg",
-    41:"Castillo de Játiva murallas 01.JPG",
-    42:"El nucli antic de Xàtiva des del castell.jpg",
-    43:"Castillo de Xàtiva vista 1.jpg",
-    44:"FlamencoSevilla.jpg",
     45:"Coves de sant Josep de la Vall d'Uixó, barques.JPG",
     46:"Interior de les coves de sant Josep, zona seca.JPG",
     47:"Vista del paratge de les coves de sant Josep des de la muntanyeta.JPG",
@@ -35,10 +25,13 @@ CURATED={
 }
 
 def download_exact(filename):
-    data=S.get(API,params={
+    for attempt in range(5):
+        data=S.get(API,params={
         "action":"query","titles":"File:"+filename,"prop":"imageinfo",
         "iiprop":"url|extmetadata|size","iiurlwidth":1200,"format":"json"
     },timeout=30)
+        if data.status_code != 429:break
+        time.sleep(8*(attempt+1))
     data.raise_for_status()
     pages=data.json().get("query",{}).get("pages",{})
     item=next(iter(pages.values()),{})
@@ -72,7 +65,7 @@ def main():
             continue
         output=folder/("place-%02d.webp"%i)
         pic.save(output,"WEBP",quality=84,method=5)
-        img["src"]="images/"+output.name+"?v="+hashlib.sha256(output.read_bytes()).hexdigest()[:12]+"?v=ronda-pretty-cliff-20261024"
+        img["src"]="images/"+output.name+"?v="+hashlib.sha256(output.read_bytes()).hexdigest()[:12]
         ph["data-photo-exact"]="1"
         ph["data-photo-fallback"]=""
         ph["data-photo-source"]="curated-commons"
@@ -89,7 +82,7 @@ def main():
         credit.append(link)
         changed.append((i,art.select_one("h4").get_text(" ",strip=True),filename))
         print("Updated",i,filename,flush=True)
-        time.sleep(.15)
+        time.sleep(2)
     if not changed:raise RuntimeError("No images successfully updated; leaving HTML unchanged")
     path.write_text(str(soup),encoding="utf-8")
     print("Curated update:",len(changed),"of",len(CURATED),flush=True)
