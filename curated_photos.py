@@ -14,7 +14,8 @@ S=requests.Session()
 S.headers.update({"User-Agent":"SpainTripPhotoCurator/2.0 (static travel itinerary; Wikimedia Commons attribution; github.com/nadezhdalapshina/private_gpt)"})
 # Card position (1-based) -> exact Wikimedia Commons filename confirmed on file's description page.
 CURATED={
-    6:"Canyon El Tajo in Ronda (6931273102).jpg",
+    4:"Flamenco dancer.jpg",
+    8:"Ronda incrustée dans la Sierra.jpg",
 }
 
 def download_exact(filename):
@@ -55,7 +56,7 @@ def main():
             continue
         output=folder/("place-%02d.webp"%i)
         pic.save(output,"WEBP",quality=84,method=5)
-        img["src"]="images/"+output.name+"?v=ronda-canyon-20261024"
+        img["src"]="images/"+output.name+"?v=malaga-flamenco-aldehuela-20261024"
         ph["data-photo-exact"]="1"
         ph["data-photo-fallback"]=""
         ph["data-photo-source"]="curated-commons"
