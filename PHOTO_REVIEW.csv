@@ -1,42 +1,42 @@
 ﻿№,Место,Поисковый запрос,Совпадение по словам,Локальный файл,Источник фото,Автор
-1,Кафедральный собор,Malaga Cathedral facade Spain,0.67,images/place-01.webp,https://commons.wikimedia.org/wiki/File:Cathedral_of_Málaga.jpg,Triptosia
+1,Кафедральный собор,Malaga Cathedral facade Spain,already saved,images/place-01.webp,,
 2,Музей Пикассо,Museo Picasso Malaga Buenavista museum,0.60,images/place-02.webp,https://commons.wikimedia.org/wiki/File:Door_-_Museo_Picasso_Málaga.jpg,Teacher Traveler
-3,Набережная Muelle Uno,Muelle Uno Malaga port promenade,0.40,images/place-03.webp,https://commons.wikimedia.org/wiki/File:Sunset_in_Port_of_Malaga.jpg,07
+3,Набережная Muelle Uno,Muelle Uno Malaga port promenade,already saved,images/place-03.webp,,
 4,Фламенко: Teatro Flamenco Málaga Club,Teatro Flamenco Malaga flamenco performance,not found,,,
-5,Мост Пуэнте-Нуэво,Puente Nuevo Ronda Spain,1.00,images/place-05.webp,"https://commons.wikimedia.org/wiki/File:Puente_Nuevo,_Ronda_Spain_(18564296481).jpg",Julia Kostecka
-6,Ущелье Эль-Тахо,El Tajo gorge Ronda Spain,1.00,images/place-06.webp,"https://commons.wikimedia.org/wiki/File:Puente_Nuevo_and_El_Tajo_gorge_-_Ronda,_Spain_-_panoramio.jpg",Sergey Ashmarin
+5,Мост Пуэнте-Нуэво,Puente Nuevo Ronda Spain,already saved,images/place-05.webp,,
+6,Ущелье Эль-Тахо,El Tajo gorge Ronda Spain,already saved,images/place-06.webp,,
 7,Старый город Ронды,Ronda white old town Andalusia,not found,,,
-8,Смотровая Альдеуэла,Mirador de Aldehuela Ronda,1.00,images/place-08.webp,"https://commons.wikimedia.org/wiki/File:Mirador_de_Aldehuela,_Ronda_IMG_5161.jpg",Javier de la Rosa
+8,Смотровая Альдеуэла,Mirador de Aldehuela Ronda,already saved,images/place-08.webp,,
 9,Тропа Каминито-дель-Рей,Caminito del Rey cliff walkway Spain,not found,,,
 10,Подвесной мост,Caminito del Rey suspension bridge,not found,,,
-11,Ущелье Гайтанес,Desfiladero de los Gaitanes gorge,0.75,images/place-11.webp,https://commons.wikimedia.org/wiki/File:Desfiladero_de_los_Gaitanes_y_los_embalses_de_El_Chorro_al_fondo.jpg,AdriMLG2021
+11,Ущелье Гайтанес,Desfiladero de los Gaitanes gorge,already saved,images/place-11.webp,,
 12,Пейзажи Эль-Чорро,El Chorro reservoir Malaga scenery,not found,,,
-13,Рынок Атарасанас,Mercado Atarazanas Malaga stained glass,0.40,images/place-13.webp,https://commons.wikimedia.org/wiki/File:Escudo_Málaga_Vidriera_Atarazanas.jpg,Miwipedia
+13,Рынок Атарасанас,Mercado Atarazanas Malaga stained glass,not found,,,
 14,Алькасаба,Alcazaba Malaga Moorish palace courtyard,not found,,,
-15,Римский театр,Malaga Roman Theatre Spain,0.67,images/place-15.webp,"https://commons.wikimedia.org/wiki/File:Mural_of_the_Alcazaba,_Ancient_Roman_Theatre_and_Tajo_de_Ronda_(Tenis_Graffiti,_2018)_01.jpg",Daniel Capilla
-16,Крепость Хибральфаро,Castillo Gibralfaro Malaga port view,0.75,images/place-16.webp,https://commons.wikimedia.org/wiki/File:View_of_Malaga_from_Castillo_Gibralfaro._Spain.jpg,Ввласенко
-17,Площадь Испании,Plaza de Espana Seville Spain,1.00,images/place-17.webp,"https://commons.wikimedia.org/wiki/File:Another_Facade_The_Plaza_de_España_in_Seville,_Spain.jpg",Randomsaucepan
-18,Парк Марии Луизы,Parque Maria Luisa Seville gardens,0.80,images/place-18.webp,https://commons.wikimedia.org/wiki/File:Parque_de_María_Luisa_-_Seville_-_Av_Hernan_Cortes_-_trees_and_palm_trees_(14541247990).jpg,"Elliott Brown from Birmingham, United Kingdom"
+15,Римский театр,Malaga Roman Theatre Spain,0.67,images/place-15.webp,https://commons.wikimedia.org/wiki/File:Roman_Malaga.jpg,andynash
+16,Крепость Хибральфаро,Castillo Gibralfaro Malaga port view,already saved,images/place-16.webp,,
+17,Площадь Испании,Plaza de Espana Seville Spain,already saved,images/place-17.webp,,
+18,Парк Марии Луизы,Parque Maria Luisa Seville gardens,already saved,images/place-18.webp,,
 19,Квартал Санта-Крус,Santa Cruz Seville narrow old streets,not found,,,
 20,Набережная Гвадалквивира,Torre del Oro Seville river sunset,not found,,,
-21,Фламенко: Casa de la Memoria,Casa de la Memoria flamenco Seville,0.75,images/place-21.webp,https://commons.wikimedia.org/wiki/File:Sevilla_-_Centro_Cultural_Flamenco_Casa_de_la_Memoria.jpg,Zarateman
-22,Королевский Алькасар,Real Alcazar Sevilla Patio de Doncellas,1.00,images/place-22.webp,"https://commons.wikimedia.org/wiki/File:Patio_de_las_Doncellas,_Real_Alcázar_de_Sevilla.jpg",Jl FilpoC
-23,Сады Алькасара,Real Alcazar Seville gardens fountains,0.60,images/place-23.webp,https://commons.wikimedia.org/wiki/File:Fountain_gardens_alcazar_Seville_Andalusia_Spain.jpg,Jebulon
-24,Собор и Хиральда,Seville Cathedral Giralda,1.00,images/place-24.webp,https://commons.wikimedia.org/wiki/File:Orange_trees_courtyard_cathedral_from_Giralda_Seville_Spain.jpg,Jebulon
-25,Метрополь Парасоль,Setas de Sevilla wooden building,0.25,images/place-25.webp,https://commons.wikimedia.org/wiki/File:Parasol_Metropol_Sevilla.JPG,Michimaya
-26,Дворцы Насридов,Alhambra Nasrid Palaces Court of Lions,0.80,images/place-26.webp,"https://commons.wikimedia.org/wiki/File:Nasrid_Palaces_-_The_Alhambra_-_Granada_-_Court_of_""Madraza_de_los_Principes""_(14600271546).jpg","Elliott Brown from Birmingham, United Kingdom"
-27,Сады Хенералифе,Generalife gardens Granada Alhambra,1.00,images/place-27.webp,https://commons.wikimedia.org/wiki/File:Architecture_in_Generalife_Gardens_-_Alhambra_-_Granada_-_Spain.jpg,Adam63
-28,Крепость Алькасаба,Alcazaba Alhambra towers Granada,0.75,images/place-28.webp,https://commons.wikimedia.org/wiki/File:Granada-La_Alhambra-15-Torres_de_la_Alcazaba-20110920.jpg,Daniel Villafruela.
-29,Дворец Парталь,Palacio del Partal Granada Alhambra,0.80,images/place-29.webp,"https://commons.wikimedia.org/wiki/File:Außenfassade_des_Palacio_del_Partal,_Alhambra_-_panoramio.jpg",Martin Furtschegger
+21,Фламенко: Casa de la Memoria,Casa de la Memoria flamenco Seville,already saved,images/place-21.webp,,
+22,Королевский Алькасар,Real Alcazar Sevilla Patio de Doncellas,already saved,images/place-22.webp,,
+23,Сады Алькасара,Real Alcazar Seville gardens fountains,already saved,images/place-23.webp,,
+24,Собор и Хиральда,Seville Cathedral Giralda,already saved,images/place-24.webp,,
+25,Метрополь Парасоль,Setas de Sevilla wooden building,already saved,images/place-25.webp,,
+26,Дворцы Насридов,Alhambra Nasrid Palaces Court of Lions,already saved,images/place-26.webp,,
+27,Сады Хенералифе,Generalife gardens Granada Alhambra,already saved,images/place-27.webp,,
+28,Крепость Алькасаба,Alcazaba Alhambra towers Granada,already saved,images/place-28.webp,,
+29,Дворец Парталь,Palacio del Partal Granada Alhambra,already saved,images/place-29.webp,,
 30,Фламенко: Cuevas Los Tarantos,Flamenco caves Sacromonte Granada performance,not found,,,
-31,Альбайсин,Albaicin Granada white streets,0.75,images/place-31.webp,https://commons.wikimedia.org/wiki/File:Aa_a_street_of_albaicin_small_street_2016_white_in_granada_in_spain.jpg,Øyvind Holmstad
-32,Смотровая Сан-Николас,Mirador San Nicolas Granada Alhambra sunset,0.83,images/place-32.webp,"https://commons.wikimedia.org/wiki/File:Granada,_Alhambra,_desde_el_Mirador_de_San_Nicolas.jpg",Esteban Palacios Blanco
+31,Альбайсин,Albaicin Granada white streets,already saved,images/place-31.webp,,
+32,Смотровая Сан-Николас,Mirador San Nicolas Granada Alhambra sunset,already saved,images/place-32.webp,,
 33,Каррера-дель-Дарро,Carrera del Darro Granada stone bridge,not found,,,
-34,Сакромонте,Sacromonte Granada cave houses,0.75,images/place-34.webp,https://commons.wikimedia.org/wiki/File:AA_A_CAVE_HOUSE_ON_THE_HILLS_OF_SACROMONTE_IN_GRANADA_2016.jpg,Øyvind Holmstad
-35,Площадь Девы Марии,Plaza de la Virgen Valencia square,0.75,images/place-35.webp,"https://commons.wikimedia.org/wiki/File:Plaza_de_la_Virgen,_Valencia,_España,_2014-06-30,_DD_163.JPG",Diego Delso
-36,Центральный рынок,Mercado Central Valencia interior,1.00,images/place-36.webp,https://commons.wikimedia.org/wiki/File:Interior_mercado_central_Valencia_01.JPG,Miguel Hermoso Cuesta
-37,Собор Валенсии,Valencia Cathedral Miguelete,0.67,images/place-37.webp,https://commons.wikimedia.org/wiki/File:El_Miguelete_torre_campanario_de_la_catedral_de_Valencia_vista_Puerta_del_Palau_de_la_catedral.jpg,Pcb2mail
-38,Район Эль-Кармен,Barrio del Carmen Valencia streets,0.80,images/place-38.webp,https://commons.wikimedia.org/wiki/File:Valencia-_Barrio_del_Carmen_(25095338261).jpg,"Jorge Franganillo from Barcelona, Spain"
+34,Сакромонте,Sacromonte Granada cave houses,already saved,images/place-34.webp,,
+35,Площадь Девы Марии,Plaza de la Virgen Valencia square,already saved,images/place-35.webp,,
+36,Центральный рынок,Mercado Central Valencia interior,already saved,images/place-36.webp,,
+37,Собор Валенсии,Valencia Cathedral Miguelete,already saved,images/place-37.webp,,
+38,Район Эль-Кармен,Barrio del Carmen Valencia streets,already saved,images/place-38.webp,,
 39,Фламенко: Palosanto,Palosanto Tablao Flamenco Valencia performance,not found,,,
 40,Замок Хативы,Castell de Xativa hilltop castle Spain,not found,,,
 41,Крепостные стены и башни,Xativa castle medieval walls towers,not found,,,
@@ -44,20 +44,20 @@
 43,Виды на долину,Xativa castle mountain panorama valley,not found,,,
 44,Фламенко: Radio City,Radio City Valencia flamenco performance,not found,,,
 45,Лодка по подземной реке,Coves de Sant Josep underground river boat,not found,,,
-46,Пещерные залы,Coves de Sant Josep stalactite cave,0.60,images/place-46.webp,"https://commons.wikimedia.org/wiki/File:Coves_de_Sant_Josep,_Vall_d'Uixó_12.jpg",Simon Burchell
+46,Пещерные залы,Coves de Sant Josep stalactite cave,already saved,images/place-46.webp,,
 47,Окрестности пещер,Coves de Sant Josep entrance landscape,not found,,,
 48,Горные пейзажи,Sierra de Espadan Castellon mountains,not found,,,
 49,Сады Турии,Jardin del Turia Valencia greenery,not found,,,
-50,Город искусств и наук,Ciudad de las Artes y las Ciencias Valencia,1.00,images/place-50.webp,"https://commons.wikimedia.org/wiki/File:Ciudad_de_las_Artes_y_las_Ciencias,_Valencia,_España,_2014-06-29,_DD_39.JPG",Diego Delso
-51,Дворец искусств,Palau de les Arts Reina Sofia Valencia,1.00,images/place-51.webp,"https://commons.wikimedia.org/wiki/File:El_Palau_de_les_Arts_Reina_Sofía,_Valencia_-_Jan_2007.jpg",Diliff
+50,Город искусств и наук,Ciudad de las Artes y las Ciencias Valencia,already saved,images/place-50.webp,,
+51,Дворец искусств,Palau de les Arts Reina Sofia Valencia,already saved,images/place-51.webp,,
 52,Пляж Мальварроса,Playa de la Malvarrosa Valencia,1.00,images/place-52.webp,https://commons.wikimedia.org/wiki/File:Fuente_en_la_Playa_Malvarrosa_(Valencia).jpg,Montaraz
-53,Цветные дома на Оньяре,Girona Onyar colorful houses,0.25,images/place-53.webp,https://commons.wikimedia.org/wiki/File:Girona_riverside_HDR.jpg,Infernalfox (talk) / Infernalfox at English Wikipedia
-54,Собор Жироны,Girona Cathedral steps,1.00,images/place-54.webp,"https://commons.wikimedia.org/wiki/File:Cathedral_steps_and_square,_Girona.jpg",Tony Grist
+53,Цветные дома на Оньяре,Girona Onyar colorful houses,already saved,images/place-53.webp,,
+54,Собор Жироны,Girona Cathedral steps,already saved,images/place-54.webp,,
 55,Еврейский квартал,Girona Jewish quarter stone streets,not found,,,
-56,Крепостные стены,Passeig de la Muralla Girona,1.00,images/place-56.webp,https://commons.wikimedia.org/wiki/File:Girona_-_Passeig_de_la_Muralla_(24109699616).jpg,Anicius Olybrius
+56,Крепостные стены,Passeig de la Muralla Girona,already saved,images/place-56.webp,,
 57,Музей-театр Дали,Dali Theatre Museum Figueres facade eggs,not found,,,
 58,Залы музея Дали,Dali Theatre Museum Figueres interior,not found,,,
-59,Белый Кадакес,Cadaques white village Spain,0.33,images/place-59.webp,https://commons.wikimedia.org/wiki/File:Cadaques_town_view_with_church_2026.jpg,CarlosNanuk
+59,Белый Кадакес,Cadaques white village Spain,already saved,images/place-59.webp,,
 60,Улочки Кадакеса,Cadaques old town white streets,not found,,,
 61,Бухта Портльигат,Portlligat cove fishing boats,not found,,,
 62,Дом Сальвадора Дали,Salvador Dali House Portlligat white exterior,not found,,,
