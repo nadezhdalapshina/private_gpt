@@ -5,7 +5,7 @@ No bulk images are manually downloaded. Selection is heuristic; review PHOTO_REV
 """
 from pathlib import Path
 from urllib.parse import urlparse
-import csv, html, re, time, unicodedata
+import csv, html, re, time, unicodedata, os
 import requests
 from bs4 import BeautifulSoup
 from PIL import Image
@@ -16,6 +16,9 @@ HTML=ROOT/'index.html'
 IMAGES=ROOT/'images'
 IMAGES.mkdir(exist_ok=True)
 API='https://commons.wikimedia.org/w/api.php'
+# These files were confirmed mismatches in the initial run. Recheck on every run.
+REJECT={2,13,15,52}
+REFRESH=os.getenv('REFRESH_PHOTOS','0')=='1'
 HEAD={'User-Agent':'SpainTripItineraryPhotoDownloader/1.0 (educational static itinerary; Wikimedia Commons API; contact: no-contact@example.org)'}
 s=requests.Session();s.headers.update(HEAD)
 
@@ -24,7 +27,7 @@ def norm(t):
     return set(re.findall(r'[a-z0-9]{3,}',t))-{'spain','spanish','photo','image','the','and','old','view','beautiful','scenic','inside','exterior'}
 
 def fetch_candidates(query):
-    params={'action':'query','generator':'search','gsrsearch':'filetype:bitmap '+query,'gsrnamespace':'6','gsrlimit':'15','prop':'imageinfo','iiprop':'url|extmetadata|size','iiurlwidth':'1200','format':'json'}
+    params={'action':'query','generator':'search','gsrsearch':'filetype:bitmap '+query,'gsrnamespace':'6','gsrlimit':'30','prop':'imageinfo','iiprop':'url|extmetadata|size','iiurlwidth':'1200','format':'json'}
     try:
         data=s.get(API,params=params,timeout=25);data.raise_for_status()
         pages=data.json().get('query',{}).get('pages',{})
@@ -37,6 +40,10 @@ def fetch_candidates(query):
             title=v.get('title','').removeprefix('File:')
             words=norm(title)
             coverage=len(wanted&words)/max(len(wanted),1)
+            # Reject weak matches. A shared word like 'Malaga' is not sufficient.
+            important=wanted-{'malaga','seville','sevilla','valencia','granada','spain','girona','ronda','cadaques','figueres','barcelona'}
+            if important and not (words & important):continue
+            if any(x in words for x in {'mural','graffiti','logo','coat','emblem','flag','poster','map','drawing'}):continue
             specificity=len(wanted&words)
             if info.get('width',0)<500:continue
             items.append((coverage,specificity,title,u,info))
@@ -60,7 +67,7 @@ def main():
         title=art.select_one('h4').get_text(' ',strip=True)
         q=ph.get('data-search') or title
         target=IMAGES/f'place-{i:02d}.webp'
-        if target.exists():
+        if target.exists() and i not in REJECT and not REFRESH:
             img['src']=f'images/{target.name}';ph['data-photo-exact']='1';ph['data-photo-fallback']=''
             log.append([i,title,q,'already saved',f'images/{target.name}','',''])
             total+=1;continue
@@ -69,7 +76,7 @@ def main():
         chosen=None
         for c in candidates:
             coverage,match_count,name,url,info=c
-            if coverage < .25 or match_count<1 or url in used:continue
+            if coverage < .48 or match_count<2 or url in used:continue
             try:save_image(url,target)
             except Exception as e:continue
             chosen=c;used.add(url);break
@@ -88,6 +95,11 @@ def main():
             log.append([i,title,q,f'{coverage:.2f}',f'images/{target.name}',page,re.sub('<[^>]+>','',artist)[:100]])
             total+=1
         else:
+            # A previously rejected mismatched image must not remain linked as 'correct'.
+            if i in REJECT and target.exists():
+                target.unlink()
+                img['src']=''
+                ph['data-photo-exact']='0'
             # Leave original URL, but DO NOT substitute another landmark: manual review required.
             # The browser link to exact photo search remains available.
             log.append([i,title,q,'not found','', '', ''])
@@ -100,6 +112,6 @@ def main():
     HTML.write_text(str(soup),encoding='utf-8')
     with open(ROOT/'PHOTO_REVIEW.csv','w',encoding='utf-8-sig',newline='') as f:
         writer=csv.writer(f);writer.writerow(['№','Место','Поисковый запрос','Совпадение по словам','Локальный файл','Источник фото','Автор']);writer.writerows(log)
-    print(f'Done: {total}/{len(all_cards)} images downloaded. Verify PHOTO_REVIEW.csv and visual accuracy. Not found cards retain links to image search.')
+    print(f'Done: {total}/{len(all_cards)} files present. Photo accuracy requires visual review; do not interpret name overlap as proof.')
 
 if __name__=='__main__':main()
