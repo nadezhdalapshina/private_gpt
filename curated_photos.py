@@ -2,7 +2,7 @@
 """Download explicitly verified Wikimedia Commons images to local files.
 Never pick another photo by word overlap. Does not touch unrelated cards.
 """
-import io, os, time
+import io, os, time, hashlib
 from pathlib import Path
 import requests
 from bs4 import BeautifulSoup
@@ -55,7 +55,7 @@ def main():
             continue
         output=folder/("place-%02d.webp"%i)
         pic.save(output,"WEBP",quality=84,method=5)
-        img["src"]="images/"+output.name+"?v=ronda-pretty-cliff-20261024"
+        img["src"]="images/"+output.name+"?v="+hashlib.sha256(output.read_bytes()).hexdigest()[:12]+"?v=ronda-pretty-cliff-20261024"
         ph["data-photo-exact"]="1"
         ph["data-photo-fallback"]=""
         ph["data-photo-source"]="curated-commons"
