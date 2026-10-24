@@ -15,8 +15,6 @@ S.headers.update({"User-Agent":"SpainTripPhotoCurator/2.0 (static travel itinera
 # Card position (1-based) -> exact Wikimedia Commons filename confirmed on file's description page.
 CURATED={
     6:"Canyon El Tajo in Ronda (6931273102).jpg",
-    7:"Old Moorish town - Calle Arminan, Ronda (14641819331).jpg",
-    8:"Mirador de Aldehuela, Ronda IMG 5161.jpg",
 }
 
 def download_exact(filename):
