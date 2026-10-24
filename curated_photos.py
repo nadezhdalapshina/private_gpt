@@ -14,13 +14,13 @@ S=requests.Session()
 S.headers.update({"User-Agent":"SpainTripPhotoCurator/2.0 (static travel itinerary; Wikimedia Commons attribution; github.com/nadezhdalapshina/private_gpt)"})
 # Card position (1-based) -> exact Wikimedia Commons filename confirmed on file's description page.
 CURATED={
-    1:("Собор Жироны","Main facade of the Cathedral of Girona and stairs.jpg"),
-    2:("Еврейский квартал","Girona - Call 02 2016-11-15.jpg"),
-    3:("Крепостные стены","City walls of Girona (4).jpg"),
-    4:("Улочки Кадакеса","Small street of Cadaques (4871795350).jpg"),
-    5:("Бухта Портльигат","Port Lligat, Cadaqués (Gerona) - panoramio (2).jpg"),
-    6:("Бухты и пляжи","Portlligat cadaques.jpg"),
-    7:("Старые улочки","Small street of Cadaques (4871795350).jpg"),
+    54:("Собор Жироны","Main facade of the Cathedral of Girona and stairs.jpg"),
+    55:("Еврейский квартал","Girona - Call 02 2016-11-15.jpg"),
+    56:("Крепостные стены","City walls of Girona (4).jpg"),
+    60:("Улочки Кадакеса","Small street of Cadaques (4871795350).jpg"),
+    61:("Бухта Портльигат","Port Lligat, Cadaqués (Gerona) - panoramio (2).jpg"),
+    64:("Бухты и пляжи","Portlligat cadaques.jpg"),
+    66:("Старые улочки","Small street of Cadaques (4871795350).jpg"),
 }
 
 def download_exact(filename):
