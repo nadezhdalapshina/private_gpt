@@ -14,7 +14,8 @@ S=requests.Session()
 S.headers.update({"User-Agent":"SpainTripPhotoCurator/2.0 (static travel itinerary; Wikimedia Commons attribution; github.com/nadezhdalapshina/private_gpt)"})
 # Card position (1-based) -> exact Wikimedia Commons filename confirmed on file's description page.
 CURATED={
-    2:"Patio del Museo Picasso Málaga (2018).jpg",
+    7:"Old Moorish town - Calle Arminan, Ronda (14641819331).jpg",
+    8:"Mirador de Aldehuela, Ronda IMG 5161.jpg",
 }
 
 def download_exact(filename):
@@ -55,7 +56,7 @@ def main():
             continue
         output=folder/("place-%02d.webp"%i)
         pic.save(output,"WEBP",quality=84,method=5)
-        img["src"]="images/"+output.name
+        img["src"]="images/"+output.name+"?v=ronda-curated-20261024"
         ph["data-photo-exact"]="1"
         ph["data-photo-fallback"]=""
         ph["data-photo-source"]="curated-commons"
