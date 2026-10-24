@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Version local image URLs based on actual file contents.
+"""Version local image URLs based on actual file contents (SHA-256).
 
 Run after an image is replaced with the same filename. Only changes <img src>
 references to existing local files; leaves external images untouched.
