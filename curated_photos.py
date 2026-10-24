@@ -14,11 +14,13 @@ S=requests.Session()
 S.headers.update({"User-Agent":"SpainTripPhotoCurator/2.0 (static travel itinerary; Wikimedia Commons attribution; github.com/nadezhdalapshina/private_gpt)"})
 # Card position (1-based) -> exact Wikimedia Commons filename confirmed on file's description page.
 CURATED={
-    1:("Кафедральный собор","View of Cathedral of Málaga.jpg"),
-    14:("Алькасаба","Alcazaba de Málaga overview.jpg"),
-    45:("Лодка по подземной реке","Coves de Sant Josep, Vall d'Uixó 02.jpg"),
-    49:("Сады Турии","Jardines del Turia. Valencia.jpg"),
-    51:("Дворец искусств","Palacio de las Artes Reina Sofía.jpg"),
+    1:("Собор Жироны","Main facade of the Cathedral of Girona and stairs.jpg"),
+    2:("Еврейский квартал","Girona - Call 02 2016-11-15.jpg"),
+    3:("Крепостные стены","City walls of Girona (4).jpg"),
+    4:("Улочки Кадакеса","Small street of Cadaques (4871795350).jpg"),
+    5:("Бухта Портльигат","Port Lligat, Cadaqués (Gerona) - panoramio (2).jpg"),
+    6:("Бухты и пляжи","Portlligat cadaques.jpg"),
+    7:("Старые улочки","Small street of Cadaques (4871795350).jpg"),
 }
 
 def download_exact(filename):
@@ -47,7 +49,7 @@ def main():
     path=ROOT/"index.html"
     soup=BeautifulSoup(path.read_text(encoding="utf-8"),"html.parser")
     cards=soup.select("article.spot")
-    assert len(cards)==66,(len(cards),"Unexpected number of cards")
+    assert len(cards)==64,(len(cards),"Unexpected number of cards")
     folder=ROOT/"images";folder.mkdir(exist_ok=True)
     changed=[]
     for i,(title,filename) in CURATED.items():
