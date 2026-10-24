@@ -14,12 +14,11 @@ S=requests.Session()
 S.headers.update({"User-Agent":"SpainTripPhotoCurator/2.0 (static travel itinerary; Wikimedia Commons attribution; github.com/nadezhdalapshina/private_gpt)"})
 # Card position (1-based) -> exact Wikimedia Commons filename confirmed on file's description page.
 CURATED={
-    17:"Sevilla - Plaza de España - 1.jpg",
-    22:"Patio de las doncellas.jpg",
-    27:"Patio de la Acequia.jpg",
-    29:"Partal Alhambra.jpg",
-    32:"Alhambra-atardecer.jpg",
-    33:"Carrera del Darro Granada Spain.jpg",
+    1:"MalagaCathedral.JPG",
+    13:"Stained Glass and Iron Architecture at Mercado de Atarazanas.jpg",
+    14:"Alcazaba de Málaga overview.jpg",
+    15:"Málaga - Teatro Romano & Alcazaba.jpg",
+    16:"Gibralfaro.jpg",
 }
 
 def download_exact(filename):
