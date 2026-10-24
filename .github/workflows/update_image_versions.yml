@@ -1,0 +1,37 @@
+name: Refresh image cache versions
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'images/**'
+      - 'update_image_versions.py'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: image-cache-versioning
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Refresh content hash versions in index.html
+        run: python update_image_versions.py
+      - name: Commit updated HTML if needed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html
+          if ! git diff --cached --quiet; then
+            git commit -m "Refresh photo cache versions"
+            git push
+          fi
